@@ -1,0 +1,5 @@
+<form {{action "save" on="submit"}}>
+  <label> Name {{ input value=model.name}}</label><br/>
+  {{textarea value=model.description placeholder="Description" cols="70" rows="6"}}<br/>
+  <input type="submit" value="Save"/> 
+</form>

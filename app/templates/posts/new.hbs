@@ -1,0 +1,6 @@
+<hr>
+<form  {{action "save" on="submit"}}>
+  <label> Title {{ input value=model.title}}</label><br/>
+  {{textarea value=model.content placeholder="Content" cols="70" rows="6"}}<br/>
+  <input type="submit" value="Save"/>
+</form>

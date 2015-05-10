@@ -39,8 +39,17 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  ENV['simple-auth'] = {
+    crossOriginWhitelist: ['*'],
+    authorizer: 'simple-auth-authorizer:devise'
+  };
+
   if (environment === 'production') {
 
+  } else {
+    ENV["simple-auth-devise"] = {
+      authorizer: "authorizer:devise"
+    };
   }
 
   return ENV;
